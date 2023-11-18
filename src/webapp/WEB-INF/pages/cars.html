@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+</head>
+<body>
+    <table border="1" width="200" height="150">
+       <caption>Таблица машин</caption>
+        <tr align="center">
+            <th>Model</th>
+            <th>Year</th>
+            <th>Color</th>
+        </tr>
+        <tr align="center" th:each = "car : ${cars}">
+            <td th:utext="${car.model}"></td>
+            <td th:utext="${car.year}"></td>
+            <td th:utext="${car.color}"></td>
+        </tr>
+    </table>
+</body>
+</html>
