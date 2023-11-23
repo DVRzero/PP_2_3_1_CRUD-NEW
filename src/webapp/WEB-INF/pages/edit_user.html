@@ -14,16 +14,24 @@
     <input hidden="hidden" type="number" th:field="*{id}" id="idAdd" placeholder="id">
     <label for="name">Имя</label>
     <input type="text" th:field="*{name}" id="name" placeholder="Имя">
+    <div style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name error</div>
     <br>
+
     <label for="surname">Фамилия</label>
     <input type="text" th:field="*{surname}" id="surname" placeholder="Фамилия">
+    <div style="color: red" th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}">Surname error</div>
     <br>
+
     <label for="age">Возраст</label>
     <input type="text" th:field="*{age}" id="age" placeholder="Возраст">
+    <div style="color: red" th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Age error</div>
     <br>
+
     <label for="job">Работа</label>
     <input type="text" th:field="*{job}" id="job" placeholder="Работа">
+    <div style="color: red" th:if="${#fields.hasErrors('job')}" th:errors="*{job}">Job error</div>
     <br>
+
     <input type="submit" value="Изменить пользователя">
   </form>
 </div>
